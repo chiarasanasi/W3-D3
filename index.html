@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TO DO LIST</h1>
+    </header>
+    <main id="content">
+      <form>
+        <div>
+          <label for="thingToDo">Cose da fare</label>
+          <input id="thingToDo" type="text" />
+        </div>
+        <button id="form-button" type="submit">METTI IN LISTA</button>
+      </form>
+      <section>
+        <ul id="to-do-list"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>- Chiara Sanasi</p>
+    </footer>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
