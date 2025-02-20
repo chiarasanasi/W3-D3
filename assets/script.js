@@ -8,24 +8,16 @@ myForm.addEventListener("submit", (e) => {
 
   let thingToDo = document.getElementById("thingToDo")
   let thingToDoValue = thingToDo.value
-  console.log(thingToDoValue)
 
   const list = document.createElement("li")
-  console.log(list)
-  list.innerText = `${thingToDoValue}`
+  list.innerHTML = `
+    <p>${thingToDoValue}</p>
+    <button>ELIMINA</button>
+  `
   const listUl = document.getElementById("to-do-list")
   list.classList.add("list-items")
   listUl.appendChild(list)
 
-  const buttonDelete = document.createElement("button")
-  buttonDelete.innerText = "Elimina"
-  const listSection = document.querySelector("section")
-  listSection.appendChild(buttonDelete)
-  buttonDelete.addEventListener("click", (e) => {
-    list.remove(list, buttonDelete)
-  })
-
-  console.log("ora eliminiamo " + thingToDoValue + " dall'input")
   thingToDo.value = ""
 
   const coseDellaLista = document.querySelectorAll(".list-items")
@@ -34,5 +26,11 @@ myForm.addEventListener("submit", (e) => {
       coseDellaLista[i].classList.remove("list-items")
       coseDellaLista[i].classList.add("list-items-underline")
     }
+  })
+
+  const buttonDelete = document.querySelector("ul li button")
+  buttonDelete.addEventListener("click", (e) => {
+    list.remove()
+    buttonDelete.remove()
   })
 })

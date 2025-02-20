@@ -48,9 +48,6 @@ footer {
   color: purple;
 }
 
-section {
-  display: ruby;
-}
 ul {
   padding: 2em 2.5em;
 }
@@ -69,4 +66,8 @@ ul {
   font-variant: small-caps;
   text-align: left;
   text-decoration: line-through;
+}
+
+li p {
+  display: inline;
 }
